@@ -12,14 +12,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { useReduxDevToolsExtension } from '@react-navigation/devtools';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { UIAlert, UIDropdownAlert, UILayoutManager } from '@tonlabs/uikit.components';
+import { UIAlertView, UIActionSheet, UINotice } from '@tonlabs/uikit.popups';
 import {
-    UIAlert,
-    UIAlertView,
-    UIDropdownAlert,
-    UILayoutManager,
-    UINotice,
-} from '@tonlabs/uikit.components';
-import { UIActionSheet, UICountryPicker, UIPopoverBackground } from '@tonlabs/uikit.navigation_legacy';
+    UICountryPicker,
+    UIPopoverBackground,
+} from '@tonlabs/uikit.navigation_legacy';
 import {
     ColorVariants,
     DarkTheme,

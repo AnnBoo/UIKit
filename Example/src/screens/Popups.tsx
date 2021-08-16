@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import { UIDropdownAlert } from '@tonlabs/uikit.components';
 import { UILinkButton } from '@tonlabs/uikit.hydrogen';
-import { UIAlertView, UIAlertViewActionType } from '@tonlabs/uikit.navigation';
+import { UIAlertView, UIAlertViewActionType } from '@tonlabs/uikit.popups';
 import { ExampleSection } from '../components/ExampleSection';
 import { ExampleScreen } from '../components/ExampleScreen';
 

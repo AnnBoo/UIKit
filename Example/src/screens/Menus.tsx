@@ -25,10 +25,10 @@ import {
     UIBottomSheet,
     UIQRCodeScannerSheet,
     UIFullscreenSheet,
-    UIActionSheet,
     UIActionSheetActionType,
     UILargeTitleHeader,
 } from '@tonlabs/uikit.navigation';
+import { UIActionSheet } from '@tonlabs/uikit.popups';
 import {
     UIMaterialTextView,
     useTheme,

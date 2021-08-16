@@ -2,12 +2,8 @@ import * as React from 'react';
 import { View } from 'react-native';
 
 import { UILinkButton } from '@tonlabs/uikit.hydrogen';
-import {
-    UINotice,
-    UINoticeType,
-    UINoticeColor,
-    UINoticeDuration,
-} from '@tonlabs/uikit.navigation';
+import { UINoticeType, UINoticeColor, UINoticeDuration } from '@tonlabs/uikit.navigation';
+import { UINotice } from '@tonlabs/uikit.popups';
 import { ExampleSection } from '../components/ExampleSection';
 import { ExampleScreen } from '../components/ExampleScreen';
 
