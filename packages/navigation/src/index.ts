@@ -12,10 +12,10 @@ export { ScrollableContext } from './Scrollable/Context';
 export * from './UILargeTitleHeader';
 export * from './UILargeTitleHeader/RefreshControl';
 export * from './constants';
-export * from './Sheets';
-export * from './UIAlertView';
-export * from './UIActionSheet';
-export * from './UINotice';
+export * from './Sheets'; // @deprecated
+export * from './UIAlertView'; // @deprecated
+export * from './UIActionSheet'; // @deprecated
+export * from './UINotice'; // @deprecated
 export * from './AnimationHelpers/getYWithRubberBandEffect';
 
 export * from './SplitNavigator/createSplitNavigator';

@@ -1,9 +1,9 @@
 {
   "name": "@tonlabs/uikit.popups",
-  "version": "0.0.1",
+  "version": "2.3.0",
   "description": "Popups package",
   "scripts": {
-    "tsc": "tsc --noEmit --composite false",
+    "tsc": "tsc --noEmit",
     "prepare": "bob build"
   },
   "publishConfig": {
