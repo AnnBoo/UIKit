@@ -41,6 +41,62 @@ import { UIPinCode, UIPinCodeBiometryType } from '@tonlabs/uikit.flask';
 import { ExampleSection } from '../components/ExampleSection';
 import { ExampleScreen } from '../components/ExampleScreen';
 
+function StaticPinCode() {
+    const [isVisible2, setVisible2] = React.useState(false);
+    const [counter, setCounter] = React.useState(0);
+    const getPasscodeWithBiometry = React.useCallback(() => {
+        return Promise.resolve('123123');
+    }, []);
+    const onEnter = React.useCallback((pin: string) => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                if (pin === '123123') {
+                    resolve({
+                        valid: true,
+                        description: 'Looks good!',
+                    });
+                } else {
+                    resolve({
+                        valid: false,
+                        description: 'Sth wrong!',
+                    });
+                }
+            }, 500);
+        });
+    }, []);
+    const onSuccess = React.useCallback(() => {
+        setVisible2(false);
+    }, []);
+    return (
+        <View style={{ flex: 1, height: 700 }}>
+            <UILinkButton
+                title="Show pin 2"
+                onPress={() => {
+                    setVisible2(!isVisible2);
+                }}
+            />
+            <UILinkButton
+                title="Refresh"
+                onPress={() => {
+                    setCounter(counter + 1);
+                }}
+            />
+            {isVisible2 && (
+                <UIPinCode
+                    label="PIN code"
+                    description="Correct"
+                    disabled={false}
+                    isBiometryEnabled
+                    biometryType={UIPinCodeBiometryType.Face}
+                    getPasscodeWithBiometry={getPasscodeWithBiometry}
+                    onEnter={onEnter}
+                    onSuccess={onSuccess}
+                />
+            )}
+        </View>
+    );
+}
+
 function PinCodeMenu() {
     const theme = useTheme();
     const [isVisible, setVisible] = React.useState(false);
@@ -102,6 +158,7 @@ function PinCodeMenu() {
                     }}
                 />
             </UIFullscreenSheet>
+            <StaticPinCode />
         </>
     );
 }
